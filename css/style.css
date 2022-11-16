@@ -1,0 +1,374 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+
+/* CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #404258;
+}
+
+main {
+  text-align: center;
+}
+
+h1 {
+  font-size: 5vw;
+  font-family: "Russo One", sans-serif;
+  text-align: center;
+  color: rgb(255, 251, 42);
+  display: block;
+}
+
+.replayButton {
+  display: flex;
+  border: none;
+  align-self: center;
+  background-color: transparent;
+}
+
+.replayButton a {
+  font-family: "Press Start 2P", cursive;
+  font-size: 4vh;
+  padding: 15px;
+  border-radius: 50px;
+  text-align: center;
+  background-color: rgb(235, 203, 0);
+}
+
+#questionText {
+  font-size: 4vw;
+  padding: 1.5rem;
+  margin: 0px 1rem 0rem 1rem;
+  background-color: white;
+  color: rgb(255, 39, 39);
+  border-radius: 10px;
+}
+
+.questionText {
+  font-size: 4vw;
+  padding: 1.5rem;
+  margin: 0px 1rem 0rem 1rem;
+  font-family: "Press Start 2P", cursive;
+  background-color: transparent;
+  color: red;
+}
+
+#count {
+  text-align: center;
+  font-size: 5vw;
+  font-family: "Russo One", sans-serif;
+  color: rgb(255, 255, 255);
+  margin-top: 2rem;
+  margin-bottom: 0px;
+}
+
+.start {
+  background-color: transparent;
+  border: 1px solid red;
+  color: white;
+  margin-top: 20px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px;
+}
+
+#start {
+  font-family: "Press Start 2P", cursive;
+  background-color: transparent;
+  color: red;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+footer a {
+  font-size: 1rem;
+  color: white;
+}
+
+#questions {
+  display: grid;
+  grid-template-columns: (autofit, 1fr 1fr);
+  grid-template-rows: 1fr 1fr;
+  height: 25vh;
+  gap: 2rem;
+  margin: 4vh 3vh;
+}
+
+.question {
+  font-family: "Limelight", cursive;
+  background-color: rgb(235, 203, 0);
+  font-size: 1.5rem;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.question:hover {
+  border: 3px solid black;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.correct {
+  background-color: green;
+}
+
+.disableHover {
+  pointer-events: none;
+}
+.fail {
+  background-color: red;
+}
+
+a {
+  text-decoration: none;
+  font-size: 32px;
+  color: black;
+}
+
+.replay {
+  background-color: rgb(235, 203, 0);
+  font-size: 9vw;
+}
+
+.glow {
+  font-size: 80px;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  color: rgb(243, 255, 15);
+  text-align: center;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 247, 0, 0.734),
+      0 0 20px rgba(255, 247, 0, 0.734), 0 0 30px rgb(230, 245, 97),
+      0 0 40px rgb(230, 245, 97), 0 0 50px rgb(230, 245, 97),
+      0 0 60px rgb(230, 245, 97), 0 0 70px rgb(230, 245, 97);
+    text-shadow: 0 0 20px rgba(255, 247, 0, 0.734), 0 0 30px rgb(230, 245, 97),
+      0 0 40px rgb(230, 245, 97), 0 0 50px rgb(230, 245, 97),
+      0 0 60px rgb(230, 245, 97), 0 0 70px rgb(230, 245, 97),
+      0 0 80px rgb(230, 245, 97);
+  }
+}
+
+.glow-stop {
+  font-size: 80px;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  color: rgb(243, 255, 15);
+  text-align: center;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out alternate 3;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 247, 0, 0.734),
+      0 0 20px rgba(255, 247, 0, 0.734), 0 0 30px rgb(230, 245, 97),
+      0 0 40px rgb(230, 245, 97), 0 0 50px rgb(230, 245, 97),
+      0 0 60px rgb(230, 245, 97), 0 0 70px rgb(230, 245, 97);
+    text-shadow: 0 0 20px rgba(255, 247, 0, 0.734), 0 0 30px rgb(230, 245, 97),
+      0 0 40px rgb(230, 245, 97), 0 0 50px rgb(230, 245, 97),
+      0 0 60px rgb(230, 245, 97), 0 0 70px rgb(230, 245, 97),
+      0 0 80px rgb(230, 245, 97);
+  }
+}
+
+#principal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  height: 92vh;
+}
+
+.gamePrincipal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  height: 92vh;
+}
+
+.gameFooter {
+  margin-top: 2.5rem;
+  text-align: center;
+  position: fixed;
+}
+
+.tutorialFooter {
+  margin-top: 10rem;
+}
+
+.finalVisual {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 70vh;
+  justify-content: space-around;
+}
+
+.tutorialDiv {
+  display: flex;
+  flex-direction: column;
+  height: 49.5vh;
+  margin-top: 1rem;
+}
+
+.tutorialImg {
+  width: 75vw;
+  border: none;
+  background-color: #404258;
+}
+
+figcaption {
+  color: white;
+  font-size: 4.5vw;
+}
+
+.letsQuiz {
+  margin: 0px 1vh 6vh 1vh;
+}
+
+/* ANIMACIONES */
+
+.leftAni {
+  animation-name: leftAnimation;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+}
+.rightAni {
+  animation-name: rightAnimation;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+}
+
+.scaleAni {
+  animation-name: scaleAnimation;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+}
+
+.mainScaleAni {
+  animation-name: mainScaleAnimation;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+}
+
+@keyframes rightAnimation {
+  from {
+    transform: translate(110%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleAnimation {
+  from {
+    transform: scale(20%);
+    opacity: 0;
+  }
+  to {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+
+@keyframes mainScaleAnimation {
+  from {
+    transform: scale(100%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0%);
+    opacity: 0;
+  }
+}
+
+@keyframes leftAnimation {
+  from {
+    transform: translate(-110%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 600px) {
+  #questions {
+    grid-template-columns: 1fr 1fr;
+  }
+  #gamePrincipal {
+    margin-bottom: 2rem;
+  }
+
+  .gameFooter {
+    margin-top: 0.5rem;
+  }
+
+  .question {
+    font-size: 3.5vw;
+  }
+
+  .letsQuiz {
+    margin-bottom: 15vh;
+  }
+
+  .tutorialDiv {
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+  }
+
+  .tutorialImg {
+    width: 35vw;
+    border: none;
+    background-color: #404258;
+  }
+
+  figcaption {
+    color: white;
+    font-size: 2vw;
+  }
+}
+
+/* @media (min-width: 800px) {
+  .tutorialDiv {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+  }
+
+  .tutorialImg {
+    width: 35vw;
+    border: none;
+    background-color: #404258;
+  }
+
+  figcaption {
+    color: white;
+    font-size: 2vw;
+  }
+} */
+
+/* Ver maquetacion por grid para tutorial */
