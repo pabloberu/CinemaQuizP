@@ -10,6 +10,7 @@ const answerDiv = document.querySelector("#questions");
 const finalDiv = document.querySelector(".gamePrincipal");
 const main = document.querySelector("main");
 const count = document.querySelector("#count");
+const startButton = document.querySelector("#startButton");
 let actualQuestion = 0;
 let score = 0;
 
@@ -73,6 +74,7 @@ const checkAnswer = async (userAnswer, question) => {
 };
 
 const renderFinal = () => {
+  playAudio("./sounds/win.mp3");
   addReplay();
   main.classList.toggle("mainScaleAni");
   setTimeout(() => {
@@ -100,8 +102,7 @@ const addReplay = async () => {
   shareButton.innerHTML = `<a class='replay' href='whatsapp://send?text=Hey! I got a ${score}/10 points on CinemaQuiz! Try to beat me on https://cinemaquiz.netlify.app/!' data-action="share/whatsapp/share"  
   target="_blank">Share with your friends</>`;
   document.querySelector(".gamePrincipal").append(shareButton);
-  //SHARE FUNCTIONALITY
-  //Share data:
+
   const shareData = {
     title: "Cinema QUIZ",
     text: `Hey! I got a ${score}/10 points on CinemaQuiz! Try to beat me`,
@@ -112,10 +113,16 @@ const addReplay = async () => {
       await navigator.share(shareData);
     } catch (err) {}
   });
-  //END OF SHARE
 };
 
+//Sounds
+
+function playAudio(url) {
+  new Audio(url).play();
+}
+
 const game = () => {
+  playAudio("./sounds/start.mp3");
   let newQuestions = randomNumber(50, 10);
   renderQuestion(newQuestions);
   //PRIMERA RESPUESTA
@@ -124,6 +131,7 @@ const game = () => {
     const check = await checkAnswer(button, newQuestions);
     if (check === true) {
       firstAnswer.classList.toggle("correct");
+      playAudio("./sounds/correct.mp3");
       score++;
       actualQuestion++;
       setTimeout(() => {
@@ -131,6 +139,7 @@ const game = () => {
       }, 300);
     } else {
       firstAnswer.classList.toggle("fail");
+      playAudio("./sounds/fail.mp3");
       actualQuestion++;
       setTimeout(() => {
         renderQuestion(newQuestions);
@@ -148,6 +157,7 @@ const game = () => {
     const check = await checkAnswer(button, newQuestions);
     if (check === true) {
       secondAnswer.classList.toggle("correct");
+      playAudio("./sounds/correct.mp3");
       score++;
       actualQuestion++;
       setTimeout(() => {
@@ -155,6 +165,7 @@ const game = () => {
       }, 300);
     } else {
       secondAnswer.classList.toggle("fail");
+      playAudio("./sounds/fail.mp3");
       actualQuestion++;
       setTimeout(() => {
         renderQuestion(newQuestions);
@@ -172,6 +183,7 @@ const game = () => {
     const check = await checkAnswer(button, newQuestions);
     if (check === true) {
       thirdAnswer.classList.toggle("correct");
+      playAudio("./sounds/correct.mp3");
       score++;
       actualQuestion++;
       setTimeout(() => {
@@ -179,6 +191,7 @@ const game = () => {
       }, 300);
     } else {
       thirdAnswer.classList.toggle("fail");
+      playAudio("./sounds/fail.mp3");
       actualQuestion++;
       setTimeout(() => {
         renderQuestion(newQuestions);
@@ -196,6 +209,7 @@ const game = () => {
     const check = await checkAnswer(button, newQuestions);
     if (check === true) {
       fourthAnswer.classList.toggle("correct");
+      playAudio("./sounds/correct.mp3");
       score++;
       actualQuestion++;
       setTimeout(() => {
@@ -203,6 +217,7 @@ const game = () => {
       }, 300);
     } else {
       fourthAnswer.classList.toggle("fail");
+      playAudio("./sounds/fail.mp3");
       actualQuestion++;
       setTimeout(() => {
         renderQuestion(newQuestions);

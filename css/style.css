@@ -194,7 +194,7 @@ a {
   flex-wrap: wrap;
   gap: 3rem;
   justify-content: center;
-  height: 92vh;
+  height: 90vh;
 }
 
 .gamePrincipal {
@@ -202,7 +202,7 @@ a {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  height: 92vh;
+  height: 90vh;
 }
 
 .gameFooter {
@@ -226,7 +226,7 @@ a {
 .tutorialDiv {
   display: flex;
   flex-direction: column;
-  height: 49.5vh;
+  height: 45vh;
   margin-top: 1rem;
 }
 
@@ -239,10 +239,11 @@ a {
 figcaption {
   color: white;
   font-size: 4.5vw;
+  margin: 0px 1.5rem;
 }
 
 .letsQuiz {
-  margin: 0px 1vh 6vh 1vh;
+  margin: 2.3rem 1vh 6vh 1vh;
 }
 
 /* ANIMACIONES */

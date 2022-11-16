@@ -1,24 +1,27 @@
-
 # 📽️ Cinema Quiz 🎞️
 
 Cinema Quiz is a movie trivia game created as the first project of the Hack A Boss coding bootcamp.
 
-
 ## ❕Description
+
 The game is simple.
 You must correctly answer ten questions about the cinephile culture.
 At the end, you can play again or even share the game with your friends to see who is the best.
+
 ## 🧠 Knowledge used:
+
 - DOM Manipulation
 - URL fetch
 - JS Async & promises
 - CSS, Flex & Grid
 - Responsive methods
-- Sharing in JS Vanilla
+- Error management
+- Audio Management
+- Social Sharing in JS Vanilla
 - Deploy With Netlify
 
-
 ## Screenshots
+
 Landing Page:
 ![Landing Page](https://i.imgur.com/orDidK0.png)
 Tutorial:
@@ -27,7 +30,6 @@ In Game:
 ![In Game](https://i.imgur.com/t8B0ZQn.png)
 Final Screen:
 ![Final Screen](https://i.imgur.com/i1BfoQ4.png)
-
 
 ## ❓ FAQ
 
@@ -40,11 +42,7 @@ Final Screen:
 -- Of course!
 Also, we would feel very flattered if our first project is an inspiration for others who are starting in the wonderful world of JavaScript
 
-
-# 💡Authors 
-
-
-
+# 💡Authors
 
 ## [![linkedin](https://img.shields.io/badge/TheBraisGF-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TheBraisgf)
 
@@ -54,8 +52,4 @@ Also, we would feel very flattered if our first project is an inspiration for ot
 
 [![instabio](https://img.shields.io/badge/SOCIAL_MEDIA-FFA500?style=for-the-badge&logo=rss&logoColor=white)](https://instabio.cc/3030409IOuIr3)
 
-
-
-
 ## [![linkedin](https://img.shields.io/badge/pabloberu-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pabloberu)
-
