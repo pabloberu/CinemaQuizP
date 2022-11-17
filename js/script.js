@@ -1,6 +1,4 @@
 "use strict";
-//Variables Globales
-//Asignacion de botones HTML
 const questionText = document.querySelector("#questionText");
 const firstAnswer = document.querySelector("#first");
 const secondAnswer = document.querySelector("#second");
@@ -14,7 +12,6 @@ const startButton = document.querySelector("#startButton");
 let actualQuestion = 0;
 let score = 0;
 
-//Funciones
 const JSON = async (url) => {
   try {
     let response = await fetch(url);
@@ -96,7 +93,6 @@ const addReplay = async () => {
   replayButton.innerHTML = "<a class='replay' href='index.html'>Replay</>";
   document.querySelector(".gamePrincipal").append(replayButton);
 
-  //ADD SHARE BUTTON
   const shareButton = document.createElement("button");
   shareButton.classList.toggle("replayButton");
   shareButton.innerHTML = `<a class='replay' href='whatsapp://send?text=Hey! I got a ${score}/10 points on CinemaQuiz! Try to beat me on https://cinemaquiz.netlify.app/!' data-action="share/whatsapp/share"  
@@ -111,11 +107,11 @@ const addReplay = async () => {
   shareButton.addEventListener("click", async () => {
     try {
       await navigator.share(shareData);
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   });
 };
-
-//Sounds
 
 function playAudio(url) {
   new Audio(url).play();
@@ -125,7 +121,7 @@ const game = () => {
   playAudio("./sounds/start.mp3");
   let newQuestions = randomNumber(50, 10);
   renderQuestion(newQuestions);
-  //PRIMERA RESPUESTA
+
   firstAnswer.addEventListener("click", async (e) => {
     const button = e.target.innerText;
     const check = await checkAnswer(button, newQuestions);
@@ -151,7 +147,6 @@ const game = () => {
     }, 300);
   });
 
-  //SEGUNDA RESPUESTA
   secondAnswer.addEventListener("click", async (e) => {
     const button = e.target.innerText;
     const check = await checkAnswer(button, newQuestions);
@@ -177,7 +172,6 @@ const game = () => {
     }, 300);
   });
 
-  //TERCERA RESPUESTA
   thirdAnswer.addEventListener("click", async (e) => {
     const button = e.target.innerText;
     const check = await checkAnswer(button, newQuestions);
@@ -203,7 +197,6 @@ const game = () => {
     }, 300);
   });
 
-  //CUARTA RESPUESTA
   fourthAnswer.addEventListener("click", async (e) => {
     const button = e.target.innerText;
     const check = await checkAnswer(button, newQuestions);

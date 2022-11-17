@@ -1,9 +1,7 @@
-/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
 
-/* CSS */
 * {
   margin: 0;
   padding: 0;
@@ -43,8 +41,8 @@ h1 {
 }
 
 #questionText {
-  font-size: 4vw;
-  padding: 1.5rem;
+  font-size: 6vw;
+  padding: 0.5rem;
   margin: 0px 1rem 0rem 1rem;
   background-color: white;
   color: rgb(255, 39, 39);
@@ -194,7 +192,7 @@ a {
   flex-wrap: wrap;
   gap: 3rem;
   justify-content: center;
-  height: 90vh;
+  height: 87vh;
 }
 
 .gamePrincipal {
@@ -211,10 +209,6 @@ a {
   position: fixed;
 }
 
-.tutorialFooter {
-  margin-top: 10rem;
-}
-
 .finalVisual {
   display: flex;
   flex-direction: column;
@@ -223,30 +217,21 @@ a {
   justify-content: space-around;
 }
 
-.tutorialDiv {
-  display: flex;
-  flex-direction: column;
-  height: 45vh;
-  margin-top: 1rem;
-}
-
 .tutorialImg {
   width: 75vw;
   border: none;
   background-color: #404258;
 }
 
-figcaption {
-  color: white;
-  font-size: 4.5vw;
-  margin: 0px 1.5rem;
+.tutorialDiv {
+  display: flex;
+  flex-direction: column;
 }
 
-.letsQuiz {
-  margin: 2.3rem 1vh 6vh 1vh;
+#tutorialTitle {
+  font-size: 4rem;
+  margin-bottom: 1rem;
 }
-
-/* ANIMACIONES */
 
 .leftAni {
   animation-name: leftAnimation;
@@ -328,7 +313,7 @@ figcaption {
   }
 
   .question {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
 
   .letsQuiz {
@@ -351,25 +336,13 @@ figcaption {
     color: white;
     font-size: 2vw;
   }
-}
 
-/* @media (min-width: 800px) {
   .tutorialDiv {
     display: flex;
-    flex-direction: column;
-    height: 50vh;
+    flex-direction: row;
   }
 
-  .tutorialImg {
-    width: 35vw;
-    border: none;
-    background-color: #404258;
+  #questionText {
+    font-size: 2.2vw;
   }
-
-  figcaption {
-    color: white;
-    font-size: 2vw;
-  }
-} */
-
-/* Ver maquetacion por grid para tutorial */
+}
