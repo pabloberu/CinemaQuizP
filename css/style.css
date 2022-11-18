@@ -97,7 +97,6 @@ footer a {
 
 #questions {
   display: grid;
-  grid-template-columns: (autofit, 1fr 1fr);
   grid-template-rows: 1fr 1fr;
   height: 25vh;
   gap: 2rem;
@@ -115,7 +114,6 @@ footer a {
 .question:hover {
   border: 3px solid black;
   cursor: pointer;
-  cursor: hand;
 }
 
 .correct {
@@ -255,7 +253,6 @@ a {
   animation-duration: 500ms;
   animation-iteration-count: 1;
 }
-
 @keyframes rightAnimation {
   from {
     transform: translate(110%);
@@ -269,22 +266,22 @@ a {
 
 @keyframes scaleAnimation {
   from {
-    transform: scale(20%);
+    transform: scale(0.2);
     opacity: 0;
   }
   to {
-    transform: scale(100%);
+    transform: scale(1);
     opacity: 1;
   }
 }
 
 @keyframes mainScaleAnimation {
   from {
-    transform: scale(100%);
+    transform: scale(1);
     opacity: 1;
   }
   to {
-    transform: scale(0%);
+    transform: scale(0);
     opacity: 0;
   }
 }
